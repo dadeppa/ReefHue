@@ -1,0 +1,7 @@
+ReefHue icon set.
+
+These icons are drawn for ReefHue in the style of Lucide (24x24 grid, 2 px stroke,
+round caps/joins, stroke="currentColor"). They can be replaced by the official
+Lucide icons (ISC license, https://lucide.dev) by dropping a file with the same
+name into this folder. "currentColor" is replaced with the theme text colour at
+runtime.

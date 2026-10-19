@@ -1,0 +1,8 @@
+*.bat text eol=crlf
+*.command text eol=lf
+*.sh text eol=lf
+*.cube text eol=lf
+*.JPG binary
+*.jpg binary
+*.MP4 binary
+*.mp4 binary

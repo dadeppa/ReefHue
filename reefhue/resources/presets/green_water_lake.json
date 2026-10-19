@@ -1,0 +1,47 @@
+{
+  "name_key": "preset.builtin.green_water_lake",
+  "edit": {
+    "underwater": {
+      "auto_strength": 100,
+      "depth_m": 6.0,
+      "water_type": "green",
+      "red_comp": 0,
+      "artificial_light": false,
+      "auto_result": {
+        "analyzed_at": null,
+        "source": null,
+        "gains_rgb": [
+          1,
+          1,
+          1
+        ],
+        "levels": null,
+        "algo_version": 1,
+        "depth_estimated": false
+      }
+    },
+    "white_balance": {
+      "temperature": 0,
+      "tint": 0
+    },
+    "light": {
+      "exposure_ev": 0.0,
+      "contrast": 10,
+      "highlights": 0,
+      "shadows": 0,
+      "whites": 0,
+      "blacks": 0
+    },
+    "color": {
+      "vibrance": 10,
+      "saturation": 0
+    },
+    "details": {
+      "dehaze": 20,
+      "clarity": 0,
+      "sharpen_amount": 0,
+      "sharpen_radius": 1.0,
+      "denoise": 0
+    }
+  }
+}

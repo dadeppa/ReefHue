@@ -1,0 +1,29 @@
+# Python / tools
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
+
+# FFmpeg is supplied by the user (see ffmpeg/README.txt)
+ffmpeg/*
+!ffmpeg/README.txt
+
+# Camera files in the project root are private originals – never commit them.
+# Shareable demo files live in samples/ (serial numbers removed).
+/*.[Mm][Pp]4
+/*.[Mm][Oo][Vv]
+/*.[Jj][Pp][Gg]
+/*.[Jj][Pp][Ee][Gg]
+/*.[Hh][Ee][Ii][Cc]
+
+# samples/: only the committed demo files (not sidecars, exports or snapshots made while testing)
+samples/*
+!samples/README.md
+!samples/GOPR2797.JPG
+!samples/GX012993.MP4
+
+# ReefHue files written into opened folders, unfinished writes
+reefhue.project.json
+reefhue.project.json.bak
+*.part
