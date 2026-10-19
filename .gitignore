@@ -27,3 +27,6 @@ samples/*
 reefhue.project.json
 reefhue.project.json.bak
 *.part
+
+# Release builds (tools/make_release.py)
+dist/

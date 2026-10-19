@@ -68,7 +68,7 @@
   "ffmpeg.dialog.heading_checking": "FFmpeg wordt gecontroleerd…",
   "ffmpeg.dialog.explanation": "ReefHue gebruikt de gratis programma's ffmpeg en ffprobe voor het afspelen en exporteren van video's en het uitlezen van videometadata. Foto's bewerken werkt ook zonder.",
   "ffmpeg.dialog.download": "FFmpeg downloaden: <a href=\"{url}\">{url}</a>",
-  "ffmpeg.dialog.help_quarantine": "macOS kan programma's van internet blokkeren. Klik in de Finder met de rechtermuisknop op ffmpeg en ffprobe, kies ‘Open’ en bevestig één keer – of voer dit uit in Terminal:",
+  "ffmpeg.dialog.help_quarantine": "macOS kan programma's van internet blokkeren. Voer dit uit in Terminal om ffmpeg en ffprobe toe te staan (of start ze één keer en klik in Systeeminstellingen → Privacy en beveiliging op ‘Toch openen’):",
   "ffmpeg.dialog.help_not_executable": "Het programma is niet als uitvoerbaar gemarkeerd. Voer dit uit in Terminal:",
   "ffmpeg.dialog.help_failed": "Het programma kon niet worden gestart. Controleer of het een versie voor je systeem is (Apple Silicon: arm64; Windows: 64-bit .exe).",
   "ffmpeg.dialog.tool_ok": "{tool}: {path} ({source})",

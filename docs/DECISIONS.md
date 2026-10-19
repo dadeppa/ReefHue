@@ -1,6 +1,6 @@
 # Decisions
 
-Choices made where SPEC.md is ambiguous or silent. One short entry each, newest milestone last.
+Choices made where docs/SPEC.md is ambiguous or silent. One short entry each, newest milestone last.
 
 ## Milestone 1 – Skeleton
 

@@ -27,6 +27,6 @@ Download: https://ffmpeg.org/download.html
 
 macOS may block programs downloaded from the internet ("quarantine").
 ReefHue tries to remove this automatically at startup. If that does not work,
-right-click ffmpeg and ffprobe in Finder, choose "Open" and confirm once, or run:
+run this in Terminal (with your path to the ReefHue folder):
 
   xattr -dr com.apple.quarantine /path/to/ReefHue/ffmpeg

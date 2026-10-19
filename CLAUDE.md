@@ -1,6 +1,6 @@
 # ReefHue – conventions for Claude
 
-SPEC.md is the authoritative spec. Ambiguities → pick the most conservative option, add one short entry to `docs/DECISIONS.md`, continue. Build milestone by milestone (SPEC §17); never start the next one until the user says "continue with milestone N".
+`docs/SPEC.md` is the authoritative spec ("SPEC §N" in code comments refers to it). Ambiguities → pick the most conservative option, add one short entry to `docs/DECISIONS.md`, continue. Build milestone by milestone (SPEC §17); never start the next one until the user says "continue with milestone N".
 
 ## Stack
 - Python 3.12 (3.11 min), PySide6 (Qt 6), numpy, opencv-python-headless, Pillow, piexif, PyAV (`av`), Send2Trash, pytest. Versions pinned in `requirements.txt`.

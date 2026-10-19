@@ -6,3 +6,13 @@
 *.jpg binary
 *.MP4 binary
 *.mp4 binary
+
+# Not part of the download for users (release ZIP / GitHub "Source code" archives)
+tests/ export-ignore
+tools/ export-ignore
+docs/ export-ignore
+samples/ export-ignore
+CLAUDE.md export-ignore
+pytest.ini export-ignore
+.gitignore export-ignore
+.gitattributes export-ignore

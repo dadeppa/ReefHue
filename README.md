@@ -7,44 +7,28 @@ Colour correction for underwater photos and videos – a desktop app for macOS (
 ReefHue brings back the colours that water swallows: open a dive folder, press the magic button
 (or move the sliders yourself), and export corrected copies. Your originals stay untouched.
 
-## Requirements
+## Download and install
 
-- macOS on Apple Silicon (primary) or Windows 10/11 (64-bit)
-- **Python 3.12** (3.11 minimum) – on a Mac the native Apple Silicon build
-- Optional, for videos: **FFmpeg** (`ffmpeg` + `ffprobe`), see [FFmpeg](#ffmpeg). Photos work without it.
-- Internet access for the first start (to download the Python packages – several hundred MB;
-  about 1.5 GB on disk, inside the ReefHue folder)
+**New to this? Follow the step-by-step guide: [INSTALL.md](INSTALL.md)** (Mac and Windows, no
+experience needed).
 
-## Install and first start on macOS
+In short:
 
-1. **Install Python 3.12** from <https://www.python.org/downloads/> (the "macOS 64-bit universal2
-   installer" runs natively on Apple Silicon) – or, with Homebrew, `brew install python@3.12`.
-   Very new Python versions may not have all packages yet; 3.12 is the safe choice.
-2. **Optional: install FFmpeg** for video features: `brew install ffmpeg`
-   (Homebrew from <https://brew.sh>). See [FFmpeg](#ffmpeg) for other ways.
-3. **Unpack ReefHue** anywhere, e.g. into `~/Applications/ReefHue`.
-4. **Double-click `start.command`.** ReefHue is not signed by Apple, so the first time macOS may say
-   it "cannot be opened". Then **right-click `start.command` → Open** and confirm with *Open*. This is
-   needed only once.
-5. A Terminal window opens. On the **first start** ReefHue creates its own Python environment
-   (`.venv` inside the ReefHue folder) and installs the packages – this takes a few minutes.
-   Later starts take a few seconds. The Terminal window stays open while ReefHue runs; closing it
-   closes ReefHue.
-6. When you open a folder in *Documents*, *Desktop*, *Downloads*, iCloud or on an external drive,
-   macOS asks whether Terminal (or Python) may access it – choose **Allow**. If you clicked
-   *Don't Allow*, see [Troubleshooting](#troubleshooting).
+1. Install **Python 3.12** from <https://www.python.org/downloads/release/python-31210/>
+   (Mac: *macOS 64-bit universal2 installer*; Windows: *Windows installer (64-bit)*, tick
+   *Add python.exe to PATH*).
+2. Download **ReefHue-….zip** from the [latest release](https://github.com/dadeppa/ReefHue/releases/latest)
+   (under *Assets*) and unpack it.
+3. Start **`start.command`** (Mac) or **`start.bat`** (Windows). The first start installs the Python
+   packages into a `.venv` folder inside ReefHue (internet needed, a few minutes, about 1.5 GB).
+   - Mac: the app is not signed by Apple. When macOS says it could not verify `start.command`, open
+     *System Settings → Privacy & Security* and click **Open Anyway** (once).
+   - Windows: if SmartScreen warns, choose *More info → Run anyway*.
+4. Optional, for videos: install FFmpeg (see below).
 
-Packages are only re-installed when `requirements.txt` changes (e.g. after an update). If the
-environment is ever broken, delete the `.venv` folder and start again.
-
-## Install on Windows
-
-1. Install Python 3.12 (64-bit) from <https://www.python.org/downloads/> and tick
-   **"Add python.exe to PATH"** in the installer.
-2. Unpack ReefHue, then double-click **`start.bat`**. If SmartScreen warns, choose
-   *More info → Run anyway*. The first start installs the packages (a few minutes).
-3. For videos copy `ffmpeg.exe` and `ffprobe.exe` (64-bit) into the `ffmpeg\` folder, or install
-   FFmpeg so it is on the `PATH`.
+Requirements: macOS on Apple Silicon or Windows 10/11 (64-bit), Python 3.11–3.13 (3.12 recommended).
+Packages are re-installed only when `requirements.txt` changes; if the environment is ever broken,
+delete the `.venv` folder and start again.
 
 ## FFmpeg
 
@@ -60,8 +44,7 @@ metadata and video export need `ffmpeg` and `ffprobe`. ReefHue looks for both to
 
 - **Recommended:** `brew install ffmpeg` – a native arm64 build, easy to update, found automatically.
 - **Alternative:** put a **statically linked** arm64 build of `ffmpeg` and `ffprobe` into the
-  `ffmpeg/` folder. ReefHue tries to remove the macOS quarantine flag at start; if that fails,
-  right-click each program in Finder → Open, or run
+  `ffmpeg/` folder. ReefHue tries to remove the macOS quarantine flag at start; if that fails, run
   `xattr -dr com.apple.quarantine /path/to/ReefHue/ffmpeg`.
   Do **not** copy Homebrew's `ffmpeg` there – it is dynamically linked and needs other Homebrew files.
 - **Fallback:** an Intel static build (e.g. from evermeet.cx) runs through Rosetta 2. It works but is
@@ -161,8 +144,8 @@ changing anything writes nothing. A write-protected folder opens read-only (a no
 
 ## Troubleshooting
 
-- **"start.command cannot be opened because it is from an unidentified developer"** – right-click
-  it → *Open* → *Open* (once).
+- **"start.command" Not Opened / "Apple could not verify …"** – open *System Settings → Privacy &
+  Security*, scroll to *Security* and click **Open Anyway** (once).
 - **"ReefHue is not allowed to read the folder"** – macOS blocked access. Open *System Settings →
   Privacy & Security → Files and Folders* (or *Full Disk Access*), allow *Terminal*, then open the
   folder again.
@@ -189,7 +172,8 @@ python3.12 -m venv .venv
 .venv/bin/python tools/make_starter_content.py                                        # rebuild bundled LUTs/presets
 ```
 
-See `SPEC.md` (specification), `CLAUDE.md` (conventions) and `docs/DECISIONS.md`.
+See `docs/SPEC.md` (specification), `docs/DECISIONS.md` (decisions) and `CLAUDE.md` (conventions for
+AI-assisted development). `tools/make_release.py` builds the release ZIPs.
 
 ## License
 

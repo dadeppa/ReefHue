@@ -67,7 +67,7 @@
   "ffmpeg.dialog.heading_checking": "Checking FFmpeg…",
   "ffmpeg.dialog.explanation": "ReefHue uses the free programs ffmpeg and ffprobe for video playback, video export and reading video metadata. Photo editing works without them.",
   "ffmpeg.dialog.download": "Download FFmpeg: <a href=\"{url}\">{url}</a>",
-  "ffmpeg.dialog.help_quarantine": "macOS may block programs downloaded from the internet. In Finder, right-click ffmpeg and ffprobe, choose “Open” and confirm once – or run this in Terminal:",
+  "ffmpeg.dialog.help_quarantine": "macOS may block programs downloaded from the internet. To allow ffmpeg and ffprobe, run this in Terminal (or try to start them once and click “Open Anyway” in System Settings → Privacy & Security):",
   "ffmpeg.dialog.help_not_executable": "The program is not marked as executable. Run this in Terminal:",
   "ffmpeg.dialog.help_failed": "The program could not be started. Make sure it is a build for your system (Apple Silicon: arm64; Windows: 64-bit .exe).",
   "ffmpeg.dialog.tool_ok": "{tool}: {path} ({source})",
